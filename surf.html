@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- #region Sabio Code - You can Fold this region to remove it from sight -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="referrer" content="unsafe-url" />
+  <meta name="description" content="Sabio Coding Bootcamp" />
+  <meta itemprop="image" content="https://sabio.la/Sabio.png" />
+  <link rel="shortcut icon" href="https://sabio.la/Sabio.png" />
+  <link rel="icon" type="image/png" href="https://sabio.la/Sabio.png" />
+  <!-- Do Not Change the HTML title or anything between this line and the line with the 💘's -->
+  <title>PW Execise Template</title>
+  <link href="https://pw.sabio.la/dist/all-site.css" rel="stylesheet" />
+  <script src="https://pw.sabio.la/api/js/site"></script>
+  <script src="https://unpkg.com/axios@0.19.2/dist/axios.min.js"></script>
+  <script src="waves.js"></script>
+  <script src="waves.js"></script>
+
+  <style>
+    .card {
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.2s ease-in-out;
+      box-sizing: border-box;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+    }
+
+    .card:hover {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    .card>.inner {
+      padding: 10px;
+    }
+
+    .card .header h2,
+    h3 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .card .header {
+      margin-bottom: 5px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 350px;
+    }
+
+    .custom {
+      width: 80px !important;
+    }
+  </style>
+</head>
+
+<body class="sabio" data-ins="pw-00">
+  <!-- Do Not Edit or Remove this nav element -->
+  <nav class="do-not-remove navbar navbar-expand-md navbar-dark bg-dark sabio"></nav>
+
+  <div class="container">
+    <div class="col-3">
+      <form>
+        <div class="row p-1">
+          <h1>Surf Spot</h1>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="form-label col-12" for="waveName">Wave Name</label>
+              <input id="waveName" name="waveName" type="text" placeholder="Pipeline" class="form-control col-12"
+                required="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row p-2"></div>
+
+        <div class="row">
+          <div class="col-8">
+            <div class="form-group">
+              <label class="form-label col-12" for="location">Location</label>
+              <input id="location" name="location" type="text" placeholder="North Shore" class="form-control col-12"
+                required="" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label class="form-label col-12" for="state">State</label>
+              <select id="state" name="state" class="form-control col-8" required="">
+                <option value="" selected></option>
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row p-2"></div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="form-label col-12" for="skillLevel">Skill Level</label>
+              <select id="skillLevel" name="skillLevel" class="form-control col-12" required="">
+                <option value="" selected>Choose...</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Pro">Pro</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row p-2"></div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="form-label col-12" for="img">Image URL</label>
+              <input id="img" name="img" type="text" placeholder="https://" class="form-control col-12" required="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row p-2"></div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="form-label col-12" for="description">Description</label>
+              <textarea class="form-control col-12" id="description" name="description" required=""></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row p-2"></div>
+
+        <div class="row">
+          <div class="col-4">
+            <button id="submit" name="submit" class="form-control btn btn-outline-primary">
+              Submit
+            </button>
+            <button id="update" name="update" class="form-control btn btn-outline-warning d-none">
+              Update
+            </button>
+          </div>
+          <div class="col-4">
+            <button id="clear" name="clear" class="form-control btn btn-outline-danger">
+              Clear
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div id="start" class="row"></div>
+  </div>
+
+  <script id="template" type="text/template">
+      <div class="col-sm-4">
+        <div class="card " id="" >
+            <div class="image">
+                <img class="wavePic" src="" />
+            </div>
+            <div class="inner">
+                <div class="row">
+                    <div class="col-8 text-start">
+                        <h2 class="title">Title</h2>
+
+                           <h5 class="local">Local</h5>
+                           <h6 class="st" class="">ST</h6>
+
+                    </div>
+                    <div  class="col text-muted text-end skill">
+                        skill
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-9">
+                            <p class="description" > Content area</p>
+                        </div>
+                        <div class="col-3">
+                            <button name="edit" class="btn btn-outline-warning edit custom">Edit</button>
+                            <button name="delete" class="btn btn-outline-danger delete custom">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </script>
+
+  <!-- Do Not Edit or Remove this footer element -->
+  <footer class="do-not-remove container-fluid footer mx-auto fb-targert sabio d-none">
+    <p class="text-center">© Sabio.la 2019</p>
+  </footer>
+
+  <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻 -->
+  <script id="candidateCode">
+    function startUp() {
+      getAllWaves();
+      wireUpHandlers();
+    }
+
+    function wireUpHandlers() {
+      $("#start").on("click", ".edit", editButtonPressed);
+      $("#start").on("click", ".delete", deleteButtonPressed);
+      $("#clear").on("click", clearButtonPressed);
+      $("#submit").on("click", submitButtonPressed);
+      $("#update").on("click", updateButtonPressed);
+    }
+
+    var currentId = 0;
+
+    function submitButtonPressed(e) {
+      e.preventDefault(e);
+      submitNewWave();
+    }
+
+    function clearButtonPressed(e) {
+      e.preventDefault(e);
+      resetForm();
+      $("#submit").removeClass("d-none");
+      $("#update").addClass("d-none");
+      $("#clear").text("Clear");
+    }
+
+    function editButtonPressed(e) {
+      e.preventDefault(e);
+      var waveId = $(this).closest(".card").attr("id");
+      getCardData(waveId);
+      currentId = waveId;
+      $("#submit").addClass("d-none");
+      $("#update").removeClass("d-none");
+      $("#clear").text("Cancel");
+    }
+
+    function deleteButtonPressed(e) {
+      e.preventDefault(e);
+      if (confirm("Are you sure you want to delete this item?") == true) {
+        var waveId = $(this).closest(".card").attr("id");
+        currentId = waveId;
+        deleteWave(waveId);
+      }
+    }
+
+    function updateButtonPressed(e) {
+      e.preventDefault(e);
+      if (
+        confirm("Are you sure you want to change this information?") == true
+      ) {
+        updateWave(currentId);
+        $("#submit").removeClass("d-none");
+        $("#update").addClass("d-none");
+        $("#clear").text("Clear");
+      }
+    }
+
+    function getCardData(id) {
+      $("#waveName").val($(`#${id} .title`).text());
+      $("#location").val($(`#${id} .local`).text());
+      $("#state").val($(`#${id} .st`).text());
+      $("#skillLevel").val($(`#${id} .skill`).text());
+      $("#description").val($(`#${id} .description`).text());
+      $("#img").val($(`#${id} .wavePic`).attr("src"));
+    }
+
+    function resetForm() {
+      $("#waveName").val("");
+      $("#location").val("");
+      $("#state").val("");
+      $("#skillLevel").val("");
+      $("#description").val("");
+      $("#img").val("");
+    }
+
+    function readFormData() {
+      var data = {
+        waveName: $("#waveName").val(),
+        location: $("#location").val(),
+        state: $("#state").val(),
+        skillLevel: $("#skillLevel").val(),
+        description: $("#description").val(),
+        img: $("#img").val(),
+      };
+
+      return data;
+    }
+
+    function setFormData(data) {
+      $("#waveName").val(data.waveName);
+      $("#location").val(data.location);
+      $("#state").val(data.state);
+      $("#skillLevel").val(data.skillLevel);
+      $("#description").val(data.description);
+      $("#img").val(data.img);
+    }
+
+    function renderWaveCards(data) {
+      data.map((obj) => {
+        createCard(obj);
+      });
+    }
+
+    function createCard(obj) {
+      let template = $($("#template").html()).clone();
+      let container = $("#start");
+
+      template.find(".wavePic").attr("src", obj.img);
+      template.find(".title").text(obj.waveName);
+      template.find(".local").text(obj.location);
+      template.find(".st").text(obj.state);
+      template.find(".skill").text(obj.skillLevel);
+      template.find(".description").text(obj.description);
+      template.find(".card").attr("id", obj.id);
+      container.append(template);
+    }
+
+    // #region Axios Calls
+    function submitNewWave() {
+      var formData = readFormData();
+      wavesService.add(formData).then(newSuccess).catch(axiosError);
+    }
+
+    function getAllWaves() {
+      wavesService.get().then(getAllWavesSuccess).catch(axiosError);
+    }
+
+    function updateWave(cardId) {
+      let data = readFormData();
+      wavesService.put(cardId, data).then(putSuccess).catch(axiosError);
+    }
+
+    function deleteWave(id) {
+      wavesService.delete(id).then(deleteSuccess).catch(axiosError);
+    }
+    //#endregion
+
+    // #region Axios Success and Errors
+
+    function axiosError(err) {
+      console.warn({ "Axios Error": err });
+    }
+
+    function newSuccess(wave) {
+      createCard(wave);
+      resetForm();
+      currentId = 0;
+    }
+
+    function getAllWavesSuccess(waves) {
+      var data = waves.data.items;
+      renderWaveCards(data);
+    }
+
+    function putSuccess(updated) {
+      let obj = readFormData();
+      let container = $(`#${currentId}`);
+
+      container.find(".wavePic").attr("src", obj.img);
+      container.find(".title").text(obj.waveName);
+      container.find(".local").text(obj.location);
+      container.find(".st").text(obj.state);
+      container.find(".skill").text(obj.skillLevel);
+      container.find(".description").text(obj.description);
+      container.find(".card").attr("id", currentId);
+
+      resetForm();
+      currentId = 0;
+    }
+
+    function deleteSuccess(updated) {
+      $(`#${currentId}`).parent().remove();
+      currentId = 0;
+    }
+
+      //#endregion
+  </script>
+  <!-- 🛑 Do Not Write Any Code Below here -->
+</body>
+
+</html>
